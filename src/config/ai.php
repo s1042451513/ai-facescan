@@ -5,9 +5,9 @@ return [
     // SkinRun肌肤管家配置
     'skinrun' => [
         // apptoken
-        'app_token' => 'C6EB8E46595A45D98769A62298F29C5F',
+        'app_token' => '',
         // app秘钥
-        'app_secret' => 'b9ace95ad454efff300729e6ce806060',
+        'app_secret' => '',
         //根地址
         'api_base_url' => 'https://api.skinrun.cn/',
         // 在线测肤api
@@ -16,9 +16,9 @@ return [
     // 宜远配置
     'yiyuan' => [
         // appid
-        'app_id' => '3cafaf8fb29dfd88xx',
+        'app_id' => '',
         // app秘钥
-        'app_secret' => 'abe03226abc4a186fe188f5ec6b8b1bc',
+        'app_secret' => '',
         // 根地址
         'api_base_url' => 'https://api.yimei.ai/',
         // 在线测肤api
