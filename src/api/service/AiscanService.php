@@ -1,10 +1,10 @@
 <?php
 
-namespace Johnson\AiFacescan\api\service;
+namespace Wjohnson\AiFacescan\api\service;
 
-use Johnson\AiFacescan\common\service\BaseService;
-use Johnson\AiFacescan\common\model\UserFacescan as ServiceModel;
-use Johnson\AiFacescan\common\facade\ConfigFacade;
+use Wjohnson\AiFacescan\common\service\BaseService;
+use Wjohnson\AiFacescan\common\model\UserFacescan as ServiceModel;
+use Wjohnson\AiFacescan\common\facade\ConfigFacade;
 use think\Log;
 
 /**

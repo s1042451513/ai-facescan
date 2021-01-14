@@ -3,8 +3,8 @@
 namespace app\admin\controller\user;
 
 use app\common\controller\Backend;
-use Johnson\AiFacescan\common\model\UserFacescan as UserFacescanModel;
-use Johnson\AiFacescan\common\model\User;
+use Wjohnson\AiFacescan\common\model\UserFacescan as UserFacescanModel;
+use Wjohnson\AiFacescan\common\model\User;
 
 /**
  * 用户肌肤分析管理

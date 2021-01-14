@@ -1,6 +1,6 @@
 <?php
 
-namespace Johnson\AiFacescan\common\facade;
+namespace Wjohnson\AiFacescan\common\facade;
 
 class ConfigFacade extends Facade
 {
@@ -10,6 +10,6 @@ class ConfigFacade extends Facade
      */
     public function getFacadeClass()
     {
-        return "\\Johnson\\AiFacescan\\common\\provider\\Config";
+        return "\\Wjohnson\\AiFacescan\\common\\provider\\Config";
     }
 }

@@ -1,15 +1,15 @@
 <?php
-namespace Johnson\AiFacescan\common\facade;
+namespace Wjohnson\AiFacescan\common\facade;
 
 
 class CurlFacade extends Facade
 {
     /**
      * 配置类
-     * @return string \Johnson\AiFacescan\common\util\Curl
+     * @return string \Wjohnson\AiFacescan\common\util\Curl
      */
     public function getFacadeClass()
     {
-        return '\Johnson\AiFacescan\common\util\Curl';
+        return '\Wjohnson\AiFacescan\common\util\Curl';
     }
 }

@@ -3,7 +3,7 @@
 
 namespace app\api\controller;
 
-use Johnson\AiFacescan\api\service\AiscanService;
+use Wjohnson\AiFacescan\api\service\AiscanService;
 
 /**
  * 图文咨询

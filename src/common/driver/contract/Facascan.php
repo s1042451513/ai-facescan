@@ -1,5 +1,5 @@
 <?php
-namespace Johnson\AiFacescan\common\driver\contract;
+namespace Wjohnson\AiFacescan\common\driver\contract;
 
 interface Facascan
 {

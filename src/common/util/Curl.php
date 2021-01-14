@@ -1,5 +1,5 @@
 <?php
-namespace Johnson\AiFacescan\common\util;
+namespace Wjohnson\AiFacescan\common\util;
 
 use think\Log;
 

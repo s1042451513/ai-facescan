@@ -1,5 +1,5 @@
 <?php
-namespace Johnson\AiFacescan\common\facade;
+namespace Wjohnson\AiFacescan\common\facade;
 
 abstract class Facade
 {

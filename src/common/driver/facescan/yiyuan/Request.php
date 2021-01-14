@@ -1,9 +1,9 @@
 <?php
-namespace Johnson\AiFacescan\common\driver\facescan\yiyuan;
+namespace Wjohnson\AiFacescan\common\driver\facescan\yiyuan;
 
-use Johnson\AiFacescan\common\driver\contract\Facascan;
-use Johnson\AiFacescan\common\facade\ConfigFacade;
-use Johnson\AiFacescan\common\facade\CurlFacade;
+use Wjohnson\AiFacescan\common\driver\contract\Facascan;
+use Wjohnson\AiFacescan\common\facade\ConfigFacade;
+use Wjohnson\AiFacescan\common\facade\CurlFacade;
 
 class Request implements Facascan
 {

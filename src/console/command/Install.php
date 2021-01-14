@@ -9,7 +9,7 @@
 // | Author: 刘志淳 <chun@engineer.com>
 // +----------------------------------------------------------------------
 
-namespace Johnson\AiFacescan\console\command;
+namespace Wjohnson\AiFacescan\console\command;
 
 use think\App;
 use think\Config;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Johnson\AiFacescan\common\service;
+namespace Wjohnson\AiFacescan\common\service;
 
 use think\exception\HttpResponseException;
 use think\Request;

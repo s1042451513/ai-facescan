@@ -27,7 +27,7 @@ return [
     // ai在线测肤功能
     'facescan' => [
         // 驱动地址
-        'driver_namespace' => '\\Johnson\\AiFacescan\\common\\driver\\facescan\\',
+        'driver_namespace' => '\\Wjohnson\\AiFacescan\\common\\driver\\facescan\\',
         // 驱动名/类型
         'driver_type' => 'skinrun',
         // 默认驱动类

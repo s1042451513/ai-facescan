@@ -1,5 +1,5 @@
 <?php
-namespace Johnson\AiFacescan\common\provider;
+namespace Wjohnson\AiFacescan\common\provider;
 
 class Config
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Johnson\AiFacescan\common\model;
+namespace Wjohnson\AiFacescan\common\model;
 
 use think\Model;
 
