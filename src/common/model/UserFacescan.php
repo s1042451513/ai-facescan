@@ -11,6 +11,7 @@ class UserFacescan extends Model
     // 定义时间戳字段名
     protected $createTime = 'create_time';
     protected $updateTime = 'update_time';
+    protected $append = ['score_text'];
 
     /**
      * 关联用户表
@@ -26,6 +27,10 @@ class UserFacescan extends Model
      */
     public function getScoreTextAttr($val, $row)
     {
+        if (!isset($row['toily'])) {
+            return '';
+        }
+
         return
             __('Toily').":".$row['toily'].'; '.
             __('Uoily').":".$row['uoily'].'; '.
