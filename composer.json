@@ -1,0 +1,19 @@
+{
+    "name": "johnson/ai-facescan",
+    "description": "this is a mutil ai facescan program",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "s1042451513",
+            "email": "1042451513@qq.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "Johnson\\AiFacescan\\" : "./src/"
+        }
+    },
+    "require": {
+    }
+}
