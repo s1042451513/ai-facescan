@@ -8,7 +8,7 @@ use Wjohnson\AiFacescan\common\facade\ConfigFacade;
 use think\Log;
 
 /**
- * 文章列表服务模型类
+ * ai肌肤检测服务类
  */
 class AiscanService extends BaseService
 {
