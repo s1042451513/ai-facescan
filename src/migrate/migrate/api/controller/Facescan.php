@@ -6,7 +6,7 @@ namespace app\api\controller;
 use Wjohnson\AiFacescan\api\service\AiscanService;
 
 /**
- * 肌肤检测
+ * 图文咨询
  */
 class Facescan extends Base{
 

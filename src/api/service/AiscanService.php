@@ -2,13 +2,15 @@
 
 namespace Wjohnson\AiFacescan\api\service;
 
+use Wjohnson\AiFacescan\common\model\UserAiText;
+use Wjohnson\AiFacescan\common\model\UserAiTextClass;
 use Wjohnson\AiFacescan\common\service\BaseService;
 use Wjohnson\AiFacescan\common\model\UserFacescan as ServiceModel;
 use Wjohnson\AiFacescan\common\facade\ConfigFacade;
 use think\Log;
 
 /**
- * ai肌肤检测服务类
+ * 文章列表服务模型类
  */
 class AiscanService extends BaseService
 {
@@ -42,6 +44,7 @@ class AiscanService extends BaseService
         // 检测扫描结果存在则直接返回
         $checkExistsScanResult = $this->hasScanResult($userId, $image);
         if ($checkExistsScanResult) {
+            $this->getAiText($checkExistsScanResult);
             return $checkExistsScanResult;
         }
 
@@ -53,6 +56,7 @@ class AiscanService extends BaseService
         $resultData = $this->saveResult($userId, $config['driver_type'], $image, $scanResult);
 
         // 返回扫描结果
+        $this->getAiText($resultData);
         return $resultData;
     }
 
@@ -97,7 +101,7 @@ class AiscanService extends BaseService
         ]);
 
         if (!empty($resultData)) {
-            return $resultData;
+            return $resultData->toArray();
         }
 
         return false;
@@ -189,6 +193,39 @@ class AiscanService extends BaseService
             'question' => '',
             'advise' => '',
         ];
+    }
+
+    /**
+     *
+     */
+    private function getAiText(&$resultData)
+    {
+        // 获取分类id
+        $classWhere = [
+            'type' => 'facescan',
+            'name' => ['in', array_keys($resultData)],
+        ];
+        $classIds = (new UserAiTextClass())->where($classWhere)->column('id', 'name');
+
+        // 初始化名称变为类id和值
+        $classValue = [];
+        foreach($classIds as $name => $cid) {
+            $classValue[$cid] = $resultData[$name];
+        }
+
+        // 查询所有类型的分值文案
+        $aitexts = (new UserAiText())->where('c_id', 'in', $classIds)->field('c_id,start_score,end_score,content')->select();
+
+        // 获取合理的分值文案
+        $classIdtoName = array_flip($classIds);
+        foreach ($aitexts as $v){
+            $cval = $classValue[$v['c_id']];
+            if ($v['start_score'] <= $cval && $v['end_score'] >= $cval) {
+                $resultData[$classIdtoName[$v['c_id']]."_text"] = $v['content'];
+            }
+        }
+
+        return true;
     }
 
     /**
